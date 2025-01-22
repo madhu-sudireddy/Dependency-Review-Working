@@ -3,7 +3,7 @@ name: Dependency Review
 on:
   pull_request:
     branches:
-      - main
+      - main  # Adjust this to match your branch name
 
 jobs:
   dependency-review:
@@ -14,3 +14,5 @@ jobs:
       
       - name: Run dependency review
         uses: github/dependency-review-action@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
